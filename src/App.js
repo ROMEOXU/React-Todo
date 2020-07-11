@@ -1,7 +1,8 @@
 import React from 'react';
 import TodoList from './components/TodoList';
 import TodoForm from './components/TodoForm';
-
+import './components/Todo.css';
+import Search from './components/search';
 const mydata = [{
   id:'',
   name:'',
@@ -48,12 +49,16 @@ class App extends React.Component {
      data:this.state.data.filter(item=>item.completed===false)
    })
   }
+ 
   render() {
     return (
       <div>
-        <h2>Welcome to your Todo App!</h2>
+        <h2>Welcome to my Todo App!</h2>
+        <Search data={this.state.data}/>
         <TodoForm addNew={this.addNew}/>
         <TodoList data={this.state.data} toggleItem={this.toggleItem} removeItem={this.removeItem}/>
+        <br />
+        <div className='circle'>picture</div>
       </div>
     );
   }
