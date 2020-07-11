@@ -1,0 +1,21 @@
+.cross{
+    text-decoration: line-through;
+}
+body{
+    background-color:wheat;
+}
+
+.circle{
+    margin-top: 10%;
+    position: absolute;
+    width:80%;
+    height:80%;
+    transition:1.0s;
+    /* z-index:2; */
+    background: url(../my.png);
+    /* background-attachment: fixed; */
+    clip-path: circle(100px at 0 0);
+}
+.circle:hover{
+    clip-path: circle(1200px at 0 0);
+}
